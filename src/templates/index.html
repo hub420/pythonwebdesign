@@ -1,0 +1,101 @@
+{% extends 'base.html' %} 
+
+
+{% block title %}index{% endblock %}
+{% block customCSS %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+{% endblock %}
+
+{% block body %}
+  <body>
+  <!--firebas-->
+  <div class="container-fluid" id="banner">
+        <h6 class="fw-bolder display-3 text-center text-dark banner-heading">
+        TOols
+        </h6>
+        <p class="text-dark fw-bold text-center display-5 container">
+          I can create websites for you or your business using technologies such as Python3 and a powerful set of tools such as Jinja and Werkzeug Web Server Gateway Interface for security and stability. Please contact me at </p> <h3 class='container-fluid fw-bold'>pythonwebdesign@gmail.com </h3>
+        <p class='text-dark fw-bold text-center display-5 container'>Nice creations and robust interfaces that covers all your ideas!
+        </p>
+        <div class="text-center">
+          <div class="btn-group">
+          <a href= "{{ url_for("login") }}" target="blank" class="btn btn-secondary active nav-link text-light fw-bolder"/>Resume</a>
+        </div>   
+        </div>
+  </div>
+    <section class="blog ">
+      <div class="container mt-5" id="blog">
+        <div class="row d-grid gap-3">
+          <!--<div clas="col-lg-6 col-md-6 col-sm-12"></div>-->
+          <div class="col-md-3 col-sm-3"></div>
+          <h1 class="fw-bolder text-center text-light">My JoUrNeY</h1>
+          <p class="fw-bold text-light text-center container">
+            „Nuestra vida es un constante viaje, desde el nacimiento hasta la muerte. El paisaje varía, la gente cambia, las necesidades se transforman, pero el tren sigue adelante. La vida es el tren, no la estación.“
+            Pablo Cohelo
+          </p>
+          <div class="text-center mt-1">
+            <div class="btn-group fluid">
+              <a href= "{{ url_for("aboutMe") }}" target="blank" class="btn btn-secondary active nav-link text-light fw-bolder"/>More Info</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark">
+      <div class="container mt-3" id="footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12"></div>
+          <h1 class="text-warning fw-bold text-center">SuArEz</h1>
+          <p class="text-light">
+          Since 2019 I was very interest in programming and learnig stuff related to it, but everithing was a hobby only in june of this year I changed my mind and dedicated all my time to develop this website, not easy and complicated but here is my final project.
+          </p>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-light" >
+            
+            <h1 class="text-warning fw-bold text-center">CoUrSeS</h1>
+            <ul style="list-style-type: none ;">
+            <!--<ul class="courses">-->
+              <li class="text-center">Python</li>
+              <li class="text-center">flask</li>
+              <li class="text-center">html</li>
+              <li class="text-center">Bootstrap</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-light">
+            <h1 class="text-warning fw-bold text-center">LiNkS</h1>
+            <ul style="list-style-type: none ;">
+            <!--<ul class="links">-->
+              <li class="text-center"><a href="https://github.com/hub420" target="blank">Github</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-light">
+              <h1 class="text-warning fw-bold text-center">CoNtAcT uS</h1>
+              <ul style="list-style-type: none;">
+              <!--<ul class="social">-->
+                <li class="text-center">Costa Rica</li>
+                <li class="text-center">pythonwebdesign</li>
+              </ul>
+            </div>
+          <section id="Video">
+            <div class="container-fluid">
+          <!--Modal-->
+            <div class="col-md-6 text-center mx-auto">
+              <a class="video" data-video="../static/img/video1.mp4"data-bs-toggle="modal" data-bs-target="#firstModal"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+              <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg></a>
+              <div id="firstModal" class="modal fade" aria-hidden='true' role="dialog" style="display:none;">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                      <iframe title="myframe" src="../static/img/video1.mp4" width="100%" height="600"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+          </section>
+    </footer>
+  </body>
+</html>
+{% endblock %}

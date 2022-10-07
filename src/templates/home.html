@@ -1,0 +1,119 @@
+{% extends 'base.html' %} 
+<div class="container-fluid" id="bannerhome">
+<header class="navbar">
+{% block title %}Home{% endblock %}
+{% block customCSS %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class="d-grid gap-3">
+<h1>Welcome! {{ current_user.fullname }}</h1>
+</div> 
+<a class="btn btn-dark fw-bold mb-2" href="{{url_for('logout')}}">Logout</a>
+</header>
+
+<br>
+
+<form action='/login' method="POST">
+    <div class="container" id="cv">
+    <h1 class="text-center fw-bold text-dark ">Allen Suárez</h1>
+    </br></br>
+    <h2 class="display-6 fw-bold text-dark">Experience</h2>
+    <ul type="circle">
+    <li class="fw-bold text-dark">06/2022 WeBdEsIgN - Quit my job and start to develop my website and try to learn everithing possible about
+    python and programming with several youtube and udemy courses
+    </li>
+    <li class="fw-bold text-dark">02/2022 Landscaping - Monteverde Working as a gardener and maintenance and construction projects
+    for a homeowners Personal projects
+    </li>
+    <br>
+    <li class="fw-bold text-dark">01/2017 Personal Projects - San Juanillo Guanacaste Learning and developing organic plantation systems,
+    for tourism industries base on organic type material to transport and packaging products.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">01/2016 IMAGINE UNLIMITED CR - Nosara, Guanacaste Maintenance Manager of rental houses this company
+    was in charge of management and take care of homeowners and their needs through web sites and other 
+    software's. I was working with homeowners directly to upgrade their houses. Through daily contact with renters 
+    and management office to keep house listed and ready for rent.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">2009/03/2014 SYKES OUTSORCING - Aurora, Heredia
+    Call Center - Inbound - Citi Bank Handling numerous financial phone calls for citiphone in regards 
+    of customer information, account details and assistance to clients to solve their issues. 
+    At on line department helping clients into the steps to get the internet access and 
+    some other transactions in the citi bank web site.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">10/2007/ 2009 I.C.T OUTSORCING - Aurora, Heredia
+    Call Center - inbound- Washington Mutual. Handling financial phone calls for Washington Mutual, 
+    at two different departments one as an operator triage phone calls, transferring phone calls to their specific department. 
+    The other department was in charge of find solutions to a customer related with a product called 
+    HELOC: Home equity line of credit. And Frlo Fixed rate loan option
+    </li>
+    <br>
+    <li class="fw-bold text-dark">09/2007 I.C.T OUTSORCING - outbound
+    Call Center- Market. Variety of surveys of new brands, sports, radio stations, TV shows, by phone calls to North America.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">1/2006- 8/2007 DESAFIO - Monteverde, Costa Rica
+    Tour Operator Handling of all incoming travel reservations via email and telephone. 
+    Organization of tour itineraries catering to each client needs and desired experiences.
+    Face to face sales and booking of tours.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">6/2003-12/2005 GALERIA EXTASIS - Monteverde, Costa Rica
+    Art Gallery Manager Responsible for client relations, sales and management of the galleries financial accounts. 
+    In charge of gallery employees. Organized quarterly art shows featuring the work of local artisans.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">1/2002- 5/2003 B & B Montezuma - Montezuma
+    Hotel Manager Directed the daily operation and maintenance of the hotel. 
+    Coordinated guest recreational activities and tours.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">6/2000-12/2001 THE MONTEVERDE INSTITUTE - Monteverde, Costa Rica
+    GIS Systems Data Entry Worked extensively with GIS software to track the migrational patterns of various bird species. 
+    Created maps showing the movement patterns of migratory birds.
+    </li>
+    <br>
+    <li class="fw-bold text-dark">2/1999- 1/2000 JUNGLE GROOVE - Monteverde, Costa Rica
+    Bilingual Waiter Served people from all over the world in a busy tourist restaurant.
+    </li>
+    <br>
+    </ul>
+    <h2 class="display-6 fw-bold text-dark">Education</h2>
+    <ul type="circle">
+    <li class="fw-bold text-dark">01/2022 Udemy- several online courses like HTML- CSS  
+    </li>
+    <li class="fw-bold text-dark">02/2020 INA Manejo de Alimentos       
+    </li>
+    <li class="fw-bold text-dark">05/2019 Sololearn Certificate tutorial Python 3.    
+    </li>
+    <li class="fw-bold text-dark">08/2007 INA Diseño          
+    </li>
+    <br>
+    <li class="fw-bold text-dark">8/1992 - 5/1996 COLEGIO TECNICO PROFESIONAL SANTA ELENA - Monteverde, Costa Rica
+    Completion of general curriculum 
+    Special focus-tourism service industry
+    </li>
+    <br>
+    </ul>
+
+    <h2 class="display-6 fw-bold text-dark">Volunteer</h2>
+    <ul type="circle">
+    <li class="fw-bold text-dark">2/2000-5/2000 COCO ISLAND NATIONAL PARK Patrolled the waters around the island to prevent illegal fishing.
+    Research study of the behavioral patterns of the non native wild pig. 
+    Performed trail maintenance and other repairs.
+    </li>
+    <br>
+  </ul>
+  </div>
+  </form>
+</div>
+
+
+
+
+{% endblock %}
+
